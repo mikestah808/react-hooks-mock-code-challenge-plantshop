@@ -5,12 +5,16 @@ import PlantPage from "./PlantPage";
 function App() {
 const [newPlant, setNewPlant] = useState([])
 
+function updateNewPlant(newPlantItem){
+  setNewPlant(newPlantItem)
+}
+
 
 
   return (
     <div className="app">
       <Header />
-      <PlantPage />
+      <PlantPage onNewPlant={updateNewPlant}/>
     </div>
   );
 }
